@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="us-en">
+<head>
+	<title>Custom Filter</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="mainController">
+<div class="page"> <h3>Custom Filter to Check Card Type</h3> </div>
+<form name="form">
+    <div id="bg1">
+    <label><span>*</span> Card Number</label>
+    <div id="input_container">
+    <input id="input" type="text" ng-model="myccno" placeholder="Credit Card Number" ng-keypress="filterValue($event)" required/>
+    <img id="input_img" ng-src="{{ myccno| cardtype }}"/>
+    </div>
+    </div>
+</form>
+</body>
+</html>
